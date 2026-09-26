@@ -28,15 +28,6 @@ public class Quiz implements QuizOperation {
     }
 
     @Override
-    public void calculateScore() {
-        // Core score calculation logic
-    }
-
-    @Override
-    public void displayResult() {
-        System.out.println("Displaying results in GUI.");
-    }
-
     public int calculateScore(int[] answers) {
         int score = 0;
         for (int i = 0; i < questions.size(); i++) {
@@ -45,6 +36,11 @@ public class Quiz implements QuizOperation {
             }
         }
         return score;
+    }
+
+    @Override
+    public void displayResult(int score) {
+        System.out.println("Displaying results in GUI. Score: " + score);
     }
 
     public void recordScore(String username, int score) {
