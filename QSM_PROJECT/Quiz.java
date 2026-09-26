@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Quiz implements QuizOperation {
+/**
+ * Manages question collection and score map persistence.
+ */
+public class Quiz {
     private ArrayList<Question> questions;
     private HashMap<String, Integer> scoreMap;
 
@@ -22,12 +25,6 @@ public class Quiz implements QuizOperation {
         return scoreMap;
     }
 
-    @Override
-    public void startQuiz() {
-        System.out.println("Quiz session initiated.");
-    }
-
-    @Override
     public int calculateScore(int[] answers) {
         int score = 0;
         for (int i = 0; i < questions.size(); i++) {
@@ -36,11 +33,6 @@ public class Quiz implements QuizOperation {
             }
         }
         return score;
-    }
-
-    @Override
-    public void displayResult(int score) {
-        System.out.println("Displaying results in GUI. Score: " + score);
     }
 
     public void recordScore(String username, int score) {
