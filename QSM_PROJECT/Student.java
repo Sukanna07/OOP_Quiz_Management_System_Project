@@ -38,7 +38,7 @@ public class Student extends User {
     }
 
     public void viewProfile() {
-        System.out.println("Student Profile");
+        System.out.println("Student Profile:");
         System.out.println("Username: " + getUsername());
         System.out.println("Student ID: " + studentId);
         System.out.println("Department: " + department);
