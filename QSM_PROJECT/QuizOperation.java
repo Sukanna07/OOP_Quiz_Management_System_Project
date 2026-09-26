@@ -1,6 +1,7 @@
 public interface QuizOperation {
-    void startQuiz();
-    void calculateScore();
-    void displayResult();
-}
 
+    void startQuiz();
+    int calculateScore(int[] answers);
+    void displayResult(int score);
+    
+}
